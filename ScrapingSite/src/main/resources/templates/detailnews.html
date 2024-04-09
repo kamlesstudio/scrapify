@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>News Details</title>
+</head>
+<body>
+    <h1>News Details</h1>
+    <div th:each="${news}">
+        <p>Website URL: <span th:text="${news.websiteUrl}"></span></p>
+        <p>Links: <span th:text="${news.links}"></span></p>
+        <p>Domain Name: <span th:text="${news.domainName}"></span></p>
+        <p>Href Attribute: <span th:text="${news.hrefAttr}"></span></p>
+        <p>Href Text: <span th:text="${news.hrefText}"></span></p>
+        <p>Publish: <span th:text="${news.publish}"></span></p>
+    </div>
+    <div th:unless="${news}">
+        <p>No news available</p>
+    </div>
+</body>
+</html>
